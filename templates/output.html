@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Sentiment Analysis Result </h1>
+    {% if prediction == "Positive" %}
+    <h2 style="color:green;"> &#x1F603; Positive &#x1F603;</h2>
+    {% elif prediction == "Negative" %}
+    <h2 style="color:red;"> &#x1F625; Negative &#x1F625;</h2>
+    {% endif %}
+
+    <h1>Sentiment Analysis Prediction Score:</h1>
+    <h2 style="color: {{ color }}">{{ prediction }}</h2>
+    <h3>{{ score }}</h3>
+</body>
+</html>
